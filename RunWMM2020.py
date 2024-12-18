@@ -3,12 +3,12 @@ import numpy as np
 from matplotlib.pyplot import show
 import argparse
 
-import wmm2020 as wmm
-import wmm2020.plots as plt
+import wmm2025 as wmm
+import wmm2025.plots as plt
 
 
 p = argparse.ArgumentParser()
-p.add_argument("yeardec", help="decimal year e.g. 2020.62", type=float)
+p.add_argument("yeardec", help="decimal year e.g. 2025.62", type=float)
 p.add_argument("alt_km", help="altitude (km) default: 0.", type=float, default=0.0)
 P = p.parse_args()
 

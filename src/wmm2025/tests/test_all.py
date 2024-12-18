@@ -1,10 +1,10 @@
 from pytest import approx
 import xarray
 
-import wmm2020 as wmm
+import wmm2025 as wmm
 
 
-def test_wmm2020():
+def test_wmm2025():
     mag = wmm.wmm(65, 85, alt_km=0, yeardec=2012.52868852459)
 
     assert isinstance(mag, xarray.Dataset)
@@ -18,7 +18,7 @@ def test_wmm2020():
     assert mag.decl.item() == approx(15.67178464900435)
 
 
-def test_wmm2020_point():
+def test_wmm2025_point():
     mag = wmm.wmm_point(65, 85, alt_km=0, yeardec=2012.52868852459)
     assert isinstance(mag, dict)
 

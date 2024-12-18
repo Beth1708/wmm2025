@@ -11,7 +11,7 @@
  *
  * ABSTRACT
  *
- * The purpose of Geomagnetism Library is primarily to support the World Magnetic Model (WMM) 2015-2020.
+ * The purpose of Geomagnetism Library is primarily to support the World Magnetic Model (WMM) 2015-2025.
  * It however is built to be used for spherical harmonic models of the Earth's magnetic field
  * generally and supports models even with a large (>>12) number of degrees.  It is also used in many 
  * other geomagnetic models distributed by NCEI.

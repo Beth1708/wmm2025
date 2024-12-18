@@ -20,7 +20,7 @@ endif()
 add_library(wmm20 SHARED src/wmm_point_sub.c)
 target_link_libraries(wmm20 PRIVATE geo)
 
-# https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2020/WMM2020testvalues.pdf
+# https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2025/WMM2025testvalues.pdf
 add_executable(wmm20_file src/wmm_file.c)
 target_link_libraries(wmm20_file geo)
 

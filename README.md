@@ -1,38 +1,38 @@
-# WMM2020
+# WMM2025
 
-![Actions Status](https://github.com/space-physics/wmm2020/workflows/ci/badge.svg)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/space-physics/wmm2020.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/space-physics/wmm2020/context:python)
-[![Python versions (PyPI)](https://img.shields.io/pypi/pyversions/wmm2020.svg)](https://pypi.python.org/pypi/wmm2020)
-[![Downloads](http://pepy.tech/badge/wmm2020)](http://pepy.tech/project/wmm2020)
+![Actions Status](https://github.com/space-physics/wmm2025/workflows/ci/badge.svg)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/space-physics/wmm2025.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/space-physics/wmm2025/context:python)
+[![Python versions (PyPI)](https://img.shields.io/pypi/pyversions/wmm2025.svg)](https://pypi.python.org/pypi/wmm2025)
+[![Downloads](http://pepy.tech/badge/wmm2025)](http://pepy.tech/project/wmm2025)
 
 
-WMM2020 World Magnetic Model...in simple, object-oriented Python.
+WMM2025 World Magnetic Model...in simple, object-oriented Python.
 [WMM2015](https://github.com/space-physics/wmm2015) is also available.
 Tested on Linux, Mac and Windows.
 Most C compilers work.
 At this time Visual Studio is not supported since MSVC doesn't export function symbols without additional headers,
 which is typically done with something like SWIG.
 
-![image](./src/wmm2020/tests/incldecl.png)
+![image](./src/wmm2025/tests/incldecl.png)
 
 ## Install
 
 for the latest release from PyPi:
 
 ```sh
-python -m pip install wmm2020
+python -m pip install wmm2025
 ```
 
 Optionally, to get the cutting-edge development version:
 
 ```sh
-git clone https://github.com/space-physics/wmm2020
+git clone https://github.com/space-physics/wmm2025
 
-python -m pip install -e wmm2020
+python -m pip install -e wmm2025
 ```
 
-This Python wrapper of WMM2020 uses our build-on-run technique.
-The first time you use WMM2020, you will see messages from the Meson build system and your C compiler.
+This Python wrapper of WMM2025 uses our build-on-run technique.
+The first time you use WMM2025, you will see messages from the Meson build system and your C compiler.
 
 
 ## Usage
@@ -40,18 +40,18 @@ The first time you use WMM2020, you will see messages from the Meson build syste
 an example script
 
 ```sh
-python RunWMM2020.py
+python RunWMM2025.py
 ```
 
 or as a Python module:
 
 ```python
-import wmm2020
+import wmm2025
 
-mag = wmm2020.wmm(glat, glon, alt_km, yeardec)
+mag = wmm2025.wmm(glat, glon, alt_km, yeardec)
 ```
 
 ## Reference
 
-* WMM2020 [inclination map](https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2020/WMM2020_I_MERC.pdf)
-* WMM2020 [declination map](https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2020/WMM2020_D_MERC.pdf)
+* WMM2025 [inclination map](https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2025/WMM2025_I_MERC.pdf)
+* WMM2025 [declination map](https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2025/WMM2025_D_MERC.pdf)
