@@ -1,13 +1,13 @@
 # WMM2025
 
-![Actions Status](https://github.com/space-physics/wmm2025/workflows/ci/badge.svg)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/space-physics/wmm2025.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/space-physics/wmm2025/context:python)
+![Actions Status](https://github.com/Navigraph/wmm2025/workflows/ci/badge.svg)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Navigraph/wmm2025.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Navigraph/wmm2025/context:python)
 [![Python versions (PyPI)](https://img.shields.io/pypi/pyversions/wmm2025.svg)](https://pypi.python.org/pypi/wmm2025)
 [![Downloads](http://pepy.tech/badge/wmm2025)](http://pepy.tech/project/wmm2025)
 
 
 WMM2025 World Magnetic Model...in simple, object-oriented Python.
-[WMM2015](https://github.com/space-physics/wmm2015) is also available.
+[WMM2015](https://github.com/Navigraph/wmm2015) is also available.
 Tested on Linux, Mac and Windows.
 Most C compilers work.
 At this time Visual Studio is not supported since MSVC doesn't export function symbols without additional headers,
@@ -26,7 +26,7 @@ python -m pip install wmm2025
 Optionally, to get the cutting-edge development version:
 
 ```sh
-git clone https://github.com/space-physics/wmm2025
+git clone https://github.com/Navigraph/wmm2025
 
 python -m pip install -e wmm2025
 ```
