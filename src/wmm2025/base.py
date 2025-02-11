@@ -206,6 +206,7 @@ def wmm_point(glat: float, glon: float, alt_km: float, yeardec: float) -> dict[s
     x = ct.c_double()
     y = ct.c_double()
     z = ct.c_double()
+    h = ct.c_double()
     T = ct.c_double()
     D = ct.c_double()
     mI = ct.c_double()
@@ -222,6 +223,7 @@ def wmm_point(glat: float, glon: float, alt_km: float, yeardec: float) -> dict[s
         ct.byref(x),
         ct.byref(y),
         ct.byref(z),
+        ct.byref(h),
         ct.byref(T),
         ct.byref(D),
         ct.byref(mI),
@@ -233,6 +235,7 @@ def wmm_point(glat: float, glon: float, alt_km: float, yeardec: float) -> dict[s
     mag["north"] = x.value
     mag["east"] = y.value
     mag["down"] = z.value
+    mag["horiz"] = h.value
     mag["total"] = T.value
     mag["incl"] = mI.value
     mag["decl"] = D.value

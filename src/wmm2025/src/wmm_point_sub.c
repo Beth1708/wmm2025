@@ -29,7 +29,7 @@ April 21, 2011
  */
 
 int wmmsub(double geolatitude, double geolongitude, double HeightAboveEllipsoid, double yeardecimal,
-           double* X, double* Y, double* Z, double* F, double* Decl, double* Incl)
+           double* X, double* Y, double* Z, double* H, double* F, double* Decl, double* Incl)
 {
     MAGtype_MagneticModel * MagneticModels[1], *TimedMagneticModel;
     MAGtype_Ellipsoid Ellip;
@@ -74,7 +74,7 @@ int wmmsub(double geolatitude, double geolongitude, double HeightAboveEllipsoid,
     CoordGeodetic.HeightAboveEllipsoid = HeightAboveEllipsoid;
     CoordGeodetic.phi = geolatitude;
     CoordGeodetic.lambda = geolongitude;
-    
+
     UserDate.DecimalYear = yeardecimal;
 
     MAG_GeodeticToSpherical(Ellip, CoordGeodetic, &CoordSpherical); /*Convert from geodetic to Spherical Equations: 17-18, WMM Technical report*/
@@ -82,17 +82,25 @@ int wmmsub(double geolatitude, double geolongitude, double HeightAboveEllipsoid,
     MAG_Geomag(Ellip, CoordSpherical, CoordGeodetic, TimedMagneticModel, &GeoMagneticElements); /* Computes the geoMagnetic field elements and their time change*/
     MAG_CalculateGridVariation(CoordGeodetic, &GeoMagneticElements);
     MAG_WMMErrorCalc(GeoMagneticElements.H, &Errors);
-    
+
     // Hushed for Python use
      //MAG_PrintUserDataWithUncertainty(GeoMagneticElements, Errors, CoordGeodetic, UserDate, TimedMagneticModel, &Geoid); /* Print the results */
 
 
     MAG_FreeMagneticModelMemory(TimedMagneticModel);
     MAG_FreeMagneticModelMemory(MagneticModels[0]);
-    
+
+//    printf("\nF	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.F);
+//    printf("H	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.H);
+//    printf("X	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.X);
+//    printf("Y	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Y);
+//    printf("Z	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Z);
+//    printf("D	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Decl);
+
     *X = GeoMagneticElements.X;
     *Y = GeoMagneticElements.Y;
     *Z = GeoMagneticElements.Z;
+    *H = GeoMagneticElements.H;
     *F = GeoMagneticElements.F;
     *Decl = GeoMagneticElements.Decl;
     *Incl = GeoMagneticElements.Incl;
