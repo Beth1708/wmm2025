@@ -90,12 +90,12 @@ int wmmsub(double geolatitude, double geolongitude, double HeightAboveEllipsoid,
     MAG_FreeMagneticModelMemory(TimedMagneticModel);
     MAG_FreeMagneticModelMemory(MagneticModels[0]);
 
-    printf("\nF	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.F);
-    printf("H	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.H);
-    printf("X	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.X);
-    printf("Y	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Y);
-    printf("Z	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Z);
-    printf("D	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Decl);
+//    printf("\nF	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.F);
+//    printf("H	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.H);
+//    printf("X	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.X);
+//    printf("Y	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Y);
+//    printf("Z	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Z);
+//    printf("D	=	%9.6f +/- %5.1f nT\n", GeoMagneticElements.Decl);
 
     *X = GeoMagneticElements.X;
     *Y = GeoMagneticElements.Y;
