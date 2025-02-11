@@ -4,10 +4,10 @@ requires = ["setuptools", "wheel"]
 [tool.black]
 line-length = 100
 
-[project]
-name = "WMM2025"
-version = "2025"
-dependencies = [
-  "xarray",
-  "pytest"
-]
+#[project]
+#name = "WMM2025"
+#version = "2025"
+#dependencies = [
+#  "xarray",
+#  "pytest"
+#]
